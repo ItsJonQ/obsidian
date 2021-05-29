@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "README.md",
-            "mode": "source"
+            "mode": "preview"
           }
         }
       }
@@ -141,6 +141,7 @@
   "active": "b4c723431b4f2853",
   "lastOpenFiles": [
     "README.md",
+    "My Obsidian Vault.png",
     "2. ☯️ Areas/🌈 Craft/👩‍💻 Code/Reading/Bikeshedding - The Daily Software Anti-Pattern.md",
     "2. ☯️ Areas/🌈 Craft/🎨 Design Systems/Systems/Notable Design Systems.md",
     "2. ☯️ Areas/🌈 Craft/🎨 Design Systems/Systems/Material/Material Design.md",
@@ -148,7 +149,6 @@
     "2. ☯️ Areas/🌈 Craft/🎨 Design Systems/Systems/Blueprint/notes/Blueprint - AbstractComponent.md",
     "2. ☯️ Areas/🌈 Craft/🎨 Design Systems/Systems/AtlasKit/AtlasKit.md",
     "2. ☯️ Areas/🌈 Craft/🎨 Design Systems/Products/Modulz.md",
-    "2. ☯️ Areas/🌈 Craft/🎨 Design Systems/Figma/Design System Figma Starter Kit (Pixsellz).md",
-    "2. ☯️ Areas/🌈 Craft/🎨 Design Systems/Libraries/Radix.md"
+    "2. ☯️ Areas/🌈 Craft/🎨 Design Systems/Figma/Design System Figma Starter Kit (Pixsellz).md"
   ]
 }

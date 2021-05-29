@@ -2,6 +2,8 @@
 
 > My Obsidian workflow.
 
+![[My Obsidian Vault.png]]
+
 This repository mirrors my actual main Obsidian Vault.
 All personal and confidential information has been removed and replaced with fake content.
 
