@@ -1,0 +1,6 @@
+body.theme-dark {
+	--text-accent: #8875ff;
+	--text-accent-hover: var(--text-accent);
+	--interactive-accent: var(--text-accent);
+	--interactive-accent-hover: var(--text-accent);
+}

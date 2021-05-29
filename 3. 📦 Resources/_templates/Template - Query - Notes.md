@@ -1,0 +1,3 @@
+```query
+path:"{{title}}\/notes"
+```

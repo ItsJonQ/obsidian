@@ -1,0 +1,7 @@
+:root {
+    --font-monospace: 'SF Mono', 'Source Code Pro', Menlo, monospace
+}
+
+.markdown-source-view {
+	font-family: var(--font-monospace);
+}

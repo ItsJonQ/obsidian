@@ -1,0 +1,246 @@
+/*
+
+Minimal Theme: Customization
+
+*/
+
+/*
+== System: Typography ==
+*/
+:root {
+    /* Base */
+    --font-normal: 1rem;
+    --font-small: calc(var(--font-normal) * 0.8125);
+    --font-smaller: calc(var(--font-normal) * 0.725);
+    --font-smallest: calc(var(--font-normal) * 0.6875);
+    --font-code: 0.85em;
+
+    --font-monospace:SFMono-Regular,Menlo,Consolas,"Roboto Mono",monospace;
+
+    /* Headings */
+    --h1:1.25em;
+    --h2:1.2em;
+    --h3:1.115em;
+    --h4:1.1em;
+    --h5:1em;
+    --h6:0.85em;
+}
+
+@media (min-width: 40em) {
+    :root {
+        --h1:1.5em;
+        --h2:1.3em;
+        --h3:1.25em;
+        --h4:1.15em;
+        --h5:1em;
+        --h6:0.85em;
+    }
+}
+
+/* Font Smoothing */
+.CodeMirror-lines,
+.markdown-preview-view,
+.cm-s-obsidian .cm-formatting-hashtag
+{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*
+== System: Colors ==
+*/
+/* Source: https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/color/ */
+body {
+    --systemBlueWeb: #06c;
+    --systemBlue: rgb(0,122,255);
+    --systemIndigo: rgb(88,86,214);
+    --systemPurple: rgb(175,82,222);
+
+    --ui-active-line: rgba(0,0,0,0.025);
+    --ui-code-background: rgba(0,0,0,0.06);
+}
+body.theme-dark {
+    /* Colors */
+    --systemBlue: rgb(10,132,255);
+    --systemIndigo: rgb(94,92,230);
+    --systemPurple: rgb(191,90,242);
+
+    --ui-active-line: rgba(255,255,255,0.02);
+    --ui-code-background: rgba(255,255,255,0.06);
+}
+
+body.theme-dark,
+body.theme-light {
+    --main-accent: var(--systemBlue);
+
+	--text-accent: var(--main-accent);
+	--text-accent-hover: var(--main-accent);
+	--interactive-accent: var(--main-accent);
+	--interactive-accent-hover: var(--main-accent);
+    --background-modifier-accent: var(--main-accent);
+}
+
+.theme-light {
+    --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 65%));
+}
+.theme-dark {
+    --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
+}
+
+/*
+== App: Header ==
+*/
+.view-header {
+    height: 36px;
+}
+
+.view-header-title {
+    padding-top: 2px;
+    transition: opacity 160ms linear;
+    opacity: 0.25;
+}
+[data-mode="source"] .view-header-title {
+    padding-left: 17px;
+}
+
+.view-header-title:hover,
+.view-header-title:focus {
+    opacity: 0.75;
+}
+
+
+@media (min-width: 40em) {
+    .view-content {
+        --font-normal: 17px;
+    }
+}
+
+.markdown-preview-view h1 {
+    margin: 0.67em 0;
+}
+.markdown-preview-view h2 {
+    margin: 0.83em 0 0.25em;
+}
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+    margin: 1em 0 0.25em;
+}
+
+
+
+/*
+== Components ==
+*/
+
+/* Code */
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+    background: var(--ui-code-background);
+    color: inherit;
+    font-family: var(--font-monospace);
+    font-size: var(--font-code);
+}
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+    background: var(--ui-code-background);
+}
+.cm-inline-code.cm-header.cm-header-1,
+.cm-inline-code.cm-header.cm-header-2,
+.cm-inline-code.cm-header.cm-header-3,
+.cm-inline-code.cm-header.cm-header-4,
+.cm-inline-code.cm-header.cm-header-5,
+.cm-inline-code.cm-header.cm-header-6 {
+    font-size: 100%;
+}
+
+/* Switch */
+.checkbox-container {
+    cursor: pointer;
+    height: 21px;
+}
+.checkbox-container:after {
+    transform: translate3d(1px, 0, 0);
+}
+.checkbox-container.is-enabled:after {
+    transform: translate3d(21px, 0, 0);
+}
+
+/* Tags */
+.cm-s-obsidian span.cm-hashtag,
+.frontmatter-container .tag,
+.tag {
+    position: relative;
+    top: -1px;
+}
+
+/*
+==Editor ==
+*/
+
+/* Code Block */
+.cm-s-obsidian .HyperMD-codeblock {
+    color: var(--text-normal);
+}
+
+/* Line */
+.cm-s-obsidian .CodeMirror-line {
+    padding: 2px 5px;
+}
+
+/* Line: Active */
+.CodeMirror-activeline {
+    background: var(--ui-active-line);
+}
+
+/* Line: List */
+.cm-s-obsidian .CodeMirror-line.HyperMD-list-line {
+    padding-top: 0.3em;
+}
+
+/*
+== Preview ===
+*/
+
+/* Checklist */
+.contains-task-list {
+    padding-inline-start: 0.45em;
+}
+.markdown-preview-view .task-list-item-checkbox {
+    all: revert;
+    background: none;
+    transform: scale(1.25);
+    margin-right: 10px;
+}
+.task-list-item {
+    border-radius: 4px;
+    padding: 5px;
+    transition: background 120ms linear;
+}
+.task-list-item:hover {
+    background: rgba(0,0,0,0.05);
+}
+.task-list-item > p {
+    margin: 0;
+}
+.markdown-preview-view .task-list-item-checkbox {
+    cursor: pointer;
+}
+
+/* Link: Unresolved */
+.markdown-preview-view .internal-link.is-unresolved {
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+/* List */
+.markdown-preview-view ul li {
+    padding: 2px 0;
+}
+
+/* Query */
+.markdown-preview-view .internal-query.is-embed .internal-query-header-title {
+    font-size: var(--h6);
+    opacity: 0.3;
+}
